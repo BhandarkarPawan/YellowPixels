@@ -1,17 +1,27 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class TravelAgency extends JFrame{
     private JPanel root;
-    private JTable table1;
+    private JTable resultsTable;
     private JPanel menu;
     private JLabel image;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField locationTextField;
+    private JTextField agencyTextField;
+    private JCheckBox busCheckBox;
+    private JCheckBox planeCheckBox;
+    private JCheckBox trainCheckBox;
+    private JCheckBox carCheckBox;
+    private JPanel travelModes;
+    private JPanel details;
+    private JPanel searchByP;
+    private JButton SEARCHButton;
 
     TravelAgency(){
         setContentPane(root);
 
         image.setHorizontalAlignment(SwingConstants.LEFT);
+        setResizable(false);
         pack();
         setVisible(true);
     }
