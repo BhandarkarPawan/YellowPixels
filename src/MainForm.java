@@ -15,13 +15,25 @@ public class MainForm extends JFrame {
             switch (categoryCB.getSelectedItem().toString()){
 
                 case "TRAVEL AGENCY":
-                    new TravelAgency();
+                    try {
+                        new TravelAgency();
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
                     break;
                 case "HOSPITAL":
-                    new Hospital();
+                    try {
+                        new Hospital();
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
                     break;
                 case "HOTEL":
-                    new Hotel();
+                    try {
+                        new Hotel();
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
                     break;
                 case "SHOPS":
                     new Shops();

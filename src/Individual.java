@@ -63,16 +63,22 @@ public class Individual extends JFrame{
                 }
 
                 Object[] row; // This array will hold all the attribute values per row
-                try {
 
+                try {
                     System.out.println(sql.toString());
                     rs = stm.executeQuery(sql.toString());
 
-                    while (rs.next()){
-                        row = new Object[COLUMNS.length];
-                        for(int i=1; i<=COLUMNS.length;i++)
-                            row[i-1] = rs.getObject(i);
-                        model.addRow(row);
+                    if(!rs.next()){
+                        JOptionPane.showMessageDialog(this,
+                                "There are no Individuals that match your search");
+                    }
+                    else {
+                        do {
+                            row = new Object[COLUMNS.length];
+                            for (int i = 1; i <= COLUMNS.length; i++)
+                                row[i - 1] = rs.getObject(i);
+                            model.addRow(row);
+                        }while (rs.next());
                     }
                 } catch (SQLException e1) {
                     e1.printStackTrace();
@@ -84,7 +90,6 @@ public class Individual extends JFrame{
                 // This will center the values in each cell of the JTable
                 TableCellRenderer renderer = resultsTable.getDefaultRenderer(String.class);
                 ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
-
             });
 
 
