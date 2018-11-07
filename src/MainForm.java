@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 public class MainForm extends JFrame {
 
@@ -25,7 +27,11 @@ public class MainForm extends JFrame {
                     new Shops();
                     break;
                 case "INDIVIDUAL":
-                    new Individual();
+                    try {
+                        new Individual();
+                    } catch (ClassNotFoundException e1) {
+                        e1.printStackTrace();
+                    }
                     break;
             }
         });
@@ -38,7 +44,9 @@ public class MainForm extends JFrame {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnknownHostException {
+        InetAddress ip = InetAddress.getLocalHost();
+        System.out.println(ip.getHostAddress());
         new MainForm();
     }
 }

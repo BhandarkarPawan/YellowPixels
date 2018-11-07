@@ -84,8 +84,10 @@
           <component id="c2cc5" class="javax.swing.JButton" binding="GOButton" default-binding="true">
             <constraints/>
             <properties>
+              <background color="-43209"/>
               <font name="Arial Black"/>
-              <opaque value="false"/>
+              <foreground color="-1115649"/>
+              <opaque value="true"/>
               <text value="  GO  "/>
             </properties>
           </component>

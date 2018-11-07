@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Hospital">
-  <grid id="27dc6" binding="root" layout-manager="FlowLayout" hgap="5" vgap="0" flow-align="1">
+  <grid id="27dc6" binding="root" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
     <constraints>
       <xy x="70" y="92" width="500" height="370"/>
     </constraints>
     <properties>
-      <background color="-9472"/>
+      <background color="-404"/>
       <minimumSize width="500" height="73"/>
       <opaque value="true"/>
       <preferredSize width="500" height="365"/>
@@ -17,7 +17,7 @@
         <constraints/>
         <properties>
           <alignmentX value="0.0"/>
-          <background color="-9472"/>
+          <background color="-43209"/>
           <preferredSize width="500" height="44"/>
         </properties>
         <border type="empty" title="">
@@ -28,7 +28,7 @@
             <constraints/>
             <properties>
               <font name="Arial Black" size="16" style="1"/>
-              <foreground color="-16777216"/>
+              <foreground color="-1"/>
               <text value="HOSPITAL"/>
             </properties>
           </component>
@@ -49,7 +49,7 @@
         <constraints/>
         <properties>
           <font name="Arial Black"/>
-          <foreground color="-16777216"/>
+          <foreground color="-52204"/>
           <text value="SEARCH BY"/>
         </properties>
         <clientProperties>

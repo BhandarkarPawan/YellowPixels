@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TravelAgency">
-  <grid id="27dc6" binding="root" layout-manager="FlowLayout" hgap="5" vgap="0" flow-align="1">
+  <grid id="27dc6" binding="root" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
     <constraints>
-      <xy x="85" y="101" width="500" height="370"/>
+      <xy x="85" y="101" width="500" height="395"/>
     </constraints>
     <properties>
       <alignmentX value="0.0"/>
       <alignmentY value="0.0"/>
-      <background color="-9472"/>
-      <minimumSize width="500" height="73"/>
+      <background color="-404"/>
+      <minimumSize width="500" height="390"/>
       <preferredSize width="500" height="365"/>
     </properties>
     <border type="none"/>
@@ -17,7 +17,7 @@
         <constraints/>
         <properties>
           <alignmentX value="0.0"/>
-          <background color="-9472"/>
+          <background color="-43209"/>
           <preferredSize width="500" height="44"/>
         </properties>
         <border type="empty" title="">
@@ -28,7 +28,7 @@
             <constraints/>
             <properties>
               <font name="Arial Black" size="16" style="1"/>
-              <foreground color="-16777216"/>
+              <foreground color="-1"/>
               <text value="TRAVEL AGENCY"/>
             </properties>
           </component>
@@ -49,7 +49,7 @@
         <constraints/>
         <properties>
           <font name="Arial Black"/>
-          <foreground color="-16777216"/>
+          <foreground color="-52204"/>
           <text value="SEARCH BY"/>
         </properties>
         <clientProperties>
