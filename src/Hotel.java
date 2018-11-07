@@ -9,15 +9,16 @@ public class Hotel extends JFrame{
     private JButton SEARCHButton;
     private JTable resultsTable;
     private JPanel root;
-    private JSlider ratingSlider;
     private JRadioButton vegRadioButton;
     private JRadioButton nonVegRadioButton;
+    private JCheckBox homeDeliveryCheckBox;
 
     Hotel(){
 
         ButtonGroup foodGroup = new ButtonGroup();
         foodGroup.add(vegRadioButton);
         foodGroup.add(nonVegRadioButton);
+
 
         setContentPane(root);
         setResizable(false);
