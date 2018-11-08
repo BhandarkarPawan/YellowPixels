@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e5714ad-24e7-4310-ae00-c3ddafa6fb32" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/INSERTHospital.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTHospital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTHotel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTHotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTIndividual.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTIndividual.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTShops.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTShops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTTravelAgency.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/INSERTTravelAgency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Hospital.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Hospital.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Hotel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Individual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/MainForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/MainForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Shops.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Shops.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/TravelAgency.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/TravelAgency.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/airplane.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/airplane.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/hotel.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/hotel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/people.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/people.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/shop.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/shop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hotel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hotel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Individual.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Individual.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Individual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shops.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shops.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TravelAgency.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/TravelAgency.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TravelAgency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TravelAgency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/airplane.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/airplane.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hotel.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/hotel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/people.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/people.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shop.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,7 +17,7 @@
       <file leaf-file-name="INSERTHospital.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/INSERTHospital.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="425">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -64,7 +29,7 @@
       <file leaf-file-name="INSERTHotel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/INSERTHotel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="391">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -73,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="INSERTIndividual.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="INSERTIndividual.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/INSERTIndividual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+            <state relative-caret-position="514">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,10 +50,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="INSERTHotel.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/INSERTHotel.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
       <file leaf-file-name="INSERTShops.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/INSERTShops.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
+            <state relative-caret-position="357">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -100,8 +70,8 @@
       <file leaf-file-name="INSERTTravelAgency.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/INSERTTravelAgency.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="408">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,9 +133,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-35" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+    <option name="x" value="-9" />
+    <option name="width" value="1550" />
+    <option name="height" value="834" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -173,8 +143,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,7 +162,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,10 +169,10 @@
     <property name="ToolWindowAnt Build.ShowToolbar" value="false" />
     <property name="ToolWindowMaven Projects.ShowToolbar" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="320" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ColorHunt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -317,67 +287,67 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49932885" weight="0.32905984" />
       <window_info id="DB Browser" order="7" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32905984" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="DB Execution Console" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
       <window_info anchor="right" auto_hide="true" id="Maven Projects" order="3" weight="0.3295302" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49932885" weight="0.32905984" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18724832" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18993288" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" auto_hide="true" id="Ant Build" order="6" weight="0.24966443" />
       <window_info x="796" y="77" width="491" height="702" id="UI Designer" order="1" type="FLOATING" weight="0.3295302" />
       <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3988604" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32905984" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32905984" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info id="Designer" order="0" />
+      <window_info anchor="bottom" id="DB Execution Console" order="11" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.32905984" />
-      <window_info anchor="right" auto_hide="true" id="Ant Build" order="6" weight="0.24966443" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="bottom" id="Message" order="4" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18724832" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="DB Execution Console" order="11" />
-      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49932885" weight="0.32905984" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" auto_hide="true" id="Ant Build" order="6" weight="0.24966443" />
+      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49932885" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info id="DB Browser" order="7" />
       <window_info id="Image Layers" order="4" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="0" />
       <window_info x="796" y="77" width="491" height="702" id="UI Designer" order="1" type="FLOATING" weight="0.3295302" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3988604" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32905984" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32905984" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.32905984" />
       <window_info anchor="right" auto_hide="true" id="Maven Projects" order="3" weight="0.3295302" />
-      <window_info id="DB Browser" order="7" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -393,6 +363,56 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/INSERTHospital.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTHotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTShops.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTTravelAgency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTIndividual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -519,12 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/people.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -534,42 +548,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InsertForm.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InsertForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Individual.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shops.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hotel.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TravelAgency.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hospital.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTHotel.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTIndividual.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTHospital.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTShops.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTTravelAgency.form">
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Shops.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -625,7 +603,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/INSERTShops.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="357">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -635,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/INSERTTravelAgency.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -645,7 +623,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/INSERTHospital.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="425">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -655,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/INSERTHotel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="391">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -665,13 +643,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/INSERTIndividual.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="514">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTHotel.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -690,7 +671,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
