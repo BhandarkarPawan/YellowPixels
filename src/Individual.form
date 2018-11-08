@@ -171,6 +171,13 @@
           <text value="SEARCH"/>
         </properties>
       </component>
+      <component id="1185c" class="javax.swing.JButton" binding="INSERTButton">
+        <constraints/>
+        <properties>
+          <horizontalTextPosition value="0"/>
+          <text value="INSERT"/>
+        </properties>
+      </component>
       <scrollpane id="880e2">
         <constraints/>
         <properties>

@@ -16,6 +16,7 @@ public class Individual extends JFrame{
     private JTable resultsTable;
     private JPanel root;
     private JLabel Name;
+    private JButton INSERTButton;
     private ResultSet rs;
     private Statement stm;
 
@@ -32,14 +33,21 @@ public class Individual extends JFrame{
 
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
                     "root", "root123");
+            con.setAutoCommit(false);
+
             stm = con.createStatement();
+
+            INSERTButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    new INSERTIndividual(stm);
+                }
+            });
 
             SEARCHButton.addActionListener(e -> {
 
-                //TODO: Add code to also search by "Field of Work" -> DATABASE required
-
                 DefaultTableModel model = new DefaultTableModel(COLUMNS, 0);
-                StringBuilder sql = new StringBuilder("SELECT * FROM Individual");
+                StringBuilder sql = new StringBuilder("SELECT * FROM Individual NATURAL JOIN Main_Table");
 
                 String FName = FNameTextField.getText().trim();
                 String LName = LNameTextField.getText().trim();

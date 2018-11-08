@@ -12,39 +12,29 @@ public class MainForm extends JFrame {
 
         GOButton.addActionListener(e -> {
 
-            switch (categoryCB.getSelectedItem().toString()){
+            try {
+                switch (categoryCB.getSelectedItem().toString()) {
 
-                case "TRAVEL AGENCY":
-                    try {
+                    case "TRAVEL AGENCY":
                         new TravelAgency();
-                    } catch (Exception e1) {
-                        e1.printStackTrace();
-                    }
-                    break;
-                case "HOSPITAL":
-                    try {
+                        break;
+                    case "HOSPITAL":
                         new Hospital();
-                    } catch (Exception e1) {
-                        e1.printStackTrace();
-                    }
-                    break;
-                case "HOTEL":
-                    try {
+                        break;
+                    case "HOTEL":
                         new Hotel();
-                    } catch (Exception e1) {
-                        e1.printStackTrace();
-                    }
-                    break;
-                case "SHOPS":
-                    new Shops();
-                    break;
-                case "INDIVIDUAL":
-                    try {
+                        break;
+                    case "SHOPS":
+                        new Shops();
+                        break;
+                    case "INDIVIDUAL":
                         new Individual();
-                    } catch (ClassNotFoundException e1) {
-                        e1.printStackTrace();
-                    }
-                    break;
+                        break;
+                }
+            }catch(Exception e1){
+                JOptionPane.showMessageDialog(this, "An Error occurred.");
+                e1.printStackTrace();
+
             }
         });
 

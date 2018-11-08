@@ -1,6 +1,8 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -16,6 +18,7 @@ public class Hotel extends JFrame{
     private JRadioButton nonVegRadioButton;
     private JCheckBox homeDeliveryCheckBox;
     private JTable resultsTable;
+    private JButton INSERTButton;
     private Statement stm;
     private ResultSet rs;
 
@@ -36,16 +39,23 @@ public class Hotel extends JFrame{
 
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
                 "root", "root123");
+        con.setAutoCommit(false);
+
         stm = con.createStatement();
+
+        INSERTButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new INSERTHospital(stm);
+            }
+        });
 
         SEARCHButton.addActionListener(e -> {
 
             System.out.println("CLICKED");
 
-            //TODO: Add code to also search by "Location " -> DATABASE required
-
             DefaultTableModel model = new DefaultTableModel(COLUMNS, 0);
-            StringBuilder sql = new StringBuilder("SELECT * FROM Hotel WHERE" );
+            StringBuilder sql = new StringBuilder("SELECT * FROM Hotel NATURAL JOIN Main_Table WHERE" );
             System.out.println(sql.toString());
             String Hotel = hotelTextField.getText().trim();
             String Location = locationTextField.getText().trim();
@@ -56,6 +66,10 @@ public class Hotel extends JFrame{
                     sql.append(" name='").append(Hotel).append("' AND");
                 if(homeDeliveryCheckBox.isSelected())
                     sql.append(" has_homedelivery = true AND");
+                if(!Location.equals("")){
+                    sql.append(" street LIKE '%").append(Location)
+                            .append("%' OR city LIKE '%").append(Location).append("%' AND");
+                }
                 if (vegRadioButton.isSelected())
                     sql.append(" has_nonveg = false ;");
                 else

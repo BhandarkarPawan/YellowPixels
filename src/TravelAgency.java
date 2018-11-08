@@ -2,6 +2,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -21,6 +23,7 @@ public class TravelAgency extends JFrame{
     private JPanel searchByP;
     private JButton SEARCHButton;
     private JCheckBox internationalCheckBox;
+    private JButton INSERTButton;
 
     private Statement stm;
     private ResultSet rs;
@@ -39,18 +42,24 @@ public class TravelAgency extends JFrame{
     TravelAgency() throws Exception{
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
                 "root", "root123");
+        con.setAutoCommit(false);
         stm = con.createStatement();
+
+        INSERTButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new INSERTTravelAgency(stm);
+            }
+        });
 
         SEARCHButton.addActionListener(e -> {
 
-            //TODO: Add code to also search by "Location " -> DATABASE required
-
             DefaultTableModel model = new DefaultTableModel(COLUMNS, 0);
-            StringBuilder sql = new StringBuilder("SELECT * FROM Travel_agency");
+            StringBuilder sql = new StringBuilder("SELECT * FROM Travel_agency NATURAL JOIN Main_Table");
 
             String Agency = agencyTextField.getText().trim();
             String Location = locationTextField.getText().trim();
-            String TravelModes = null;
+            String TravelModes;
             ArrayList<String> conditions = new ArrayList<>();
 
             if(busCheckBox.isSelected()){
@@ -74,17 +83,26 @@ public class TravelAgency extends JFrame{
 
             System.out.println("Agency: "+  Agency + "TravelModes:" + TravelModes+";");
 
-            if(!Agency.equals("") || !TravelModes.equals("")){
+            if(!Agency.equals("") || !TravelModes.equals("") || !Location.equals("")){
                 // Check if the user has entered anything in the search fields
                 sql.append(" WHERE");
 
                 if(!Agency.equals("")){
                     sql.append(" name='").append(Agency).append("'");
-                    if(!TravelModes.equals(""))
-                        sql.append(" AND").append(TravelModes).append(";");
+                    if(!TravelModes.equals("") || !Location.equals(""))
+                        sql.append(" AND");
                 }
-                else
-                    sql.append(TravelModes).append(";");
+                if(!TravelModes.equals("")){
+                    sql.append(TravelModes);
+                    if(!Location.equals(""))
+                        sql.append(" AND");
+                }
+
+                if(!Location.equals("")){
+                    sql.append(" street LIKE '%").append(Location)
+                            .append("%' OR city LIKE '%").append(Location).append("%';");
+                }
+
             }
 
             Object[] row; // This array will hold all the attribute values per row

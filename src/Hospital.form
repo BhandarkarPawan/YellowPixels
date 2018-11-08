@@ -170,11 +170,18 @@
           </grid>
         </children>
       </grid>
-      <component id="371ea" class="javax.swing.JButton" binding="SEARCHButton" default-binding="true">
+      <component id="64f16" class="javax.swing.JButton" binding="SEARCHButton">
         <constraints/>
         <properties>
           <horizontalTextPosition value="0"/>
           <text value="SEARCH"/>
+        </properties>
+      </component>
+      <component id="371ea" class="javax.swing.JButton" binding="INSERTButton">
+        <constraints/>
+        <properties>
+          <horizontalTextPosition value="0"/>
+          <text value="INSERT"/>
         </properties>
       </component>
       <scrollpane id="589e6">

@@ -1,6 +1,8 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 
 public class Hospital extends JFrame {
@@ -14,6 +16,7 @@ public class Hospital extends JFrame {
     private JButton SEARCHButton;
     private JTable resultsTable;
     private JComboBox specializationCB;
+    private JButton INSERTButton;
 
     private Statement stm;
     private ResultSet rs;
@@ -32,14 +35,21 @@ public class Hospital extends JFrame {
 
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
                 "root", "root123");
+        con.setAutoCommit(false);
+
         stm = con.createStatement();
+
+        INSERTButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new INSERTHospital(stm);
+            }
+        });
 
         SEARCHButton.addActionListener(e -> {
 
-            //TODO: Add code to also search by "Location " -> DATABASE required
-
             DefaultTableModel model = new DefaultTableModel(COLUMNS, 0);
-            StringBuilder sql = new StringBuilder("SELECT phone_num, name FROM Hospital");
+            StringBuilder sql = new StringBuilder("SELECT * FROM Hospital NATURAL JOIN Main_Table");
 
             String Hospital = hospitalTextField.getText().trim();
             String Location = locationTextField.getText().trim();
@@ -48,13 +58,13 @@ public class Hospital extends JFrame {
 
             System.out.println("Hospital: "+  Hospital + "Specialization:" + Specialization+";");
 
-            if(!Hospital.equals("") || !Specialization.equals("Any")){
+            if(!Hospital.equals("") || !Specialization.equals("Any") || !Location.equals("")){
                 // Check if the user has entered anything in the search fields
                 sql.append(" WHERE");
 
                 if(!Hospital.equals("")){
                     sql.append(" name='").append(Hospital).append("'");
-                    if(!Specialization.equals("Any"))
+                    if(!Specialization.equals("Any") || !Location.equals(""))
                         sql.append(" AND");
                 }
                 if(!Specialization.equals("Any")){
@@ -73,6 +83,13 @@ public class Hospital extends JFrame {
                             sql.append(" has_cardio = true");
                             break;
                     }
+                    if(!Location.equals("")){
+                        sql.append(" AND");
+                    }
+                }
+                if(!Location.equals("")){
+                    sql.append(" street LIKE '%").append(Location)
+                            .append("%' OR city LIKE '%").append(Location).append("%';");
                 }
             }
 
