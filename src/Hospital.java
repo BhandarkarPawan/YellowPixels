@@ -1,6 +1,7 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -17,6 +18,11 @@ public class Hospital extends JFrame {
     private JTable resultsTable;
     private JComboBox specializationCB;
     private JButton INSERTButton;
+    private JTextField textField1;
+    private JLabel label1;
+    private JButton map;
+    private JLabel lbl;
+    private JTextField textField2;
 
     private Statement stm;
     private ResultSet rs;
@@ -131,10 +137,30 @@ public class Hospital extends JFrame {
 
         });
 
+        map.addActionListener(e -> {
+                    //int text = Integer.parseInt(textField1.getText());
+                    String x = "select * from Main_table where category='Hospital' and phone_num=9886144712";
+                    String q;
+                    try
+                    {
+                        rs = stm.executeQuery(x);
+                        System.out.println("aaaaaaaaaaaaa");
+                        System.out.println("ffdgdfs");
+
+                        System.out.println(rs.getObject((5)));
+                        q=(rs.getString("url"));
+                        lbl.setText(q);
+                    } catch (Exception ee) {
+                        JOptionPane.showMessageDialog(this, "Error");
+                    }
+                }
+                );
+
 
         setContentPane(root);
         setResizable(false);
         pack();
         setVisible(true);
     }
+
 }
