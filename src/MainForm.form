@@ -86,7 +86,7 @@
             <properties>
               <background color="-43209"/>
               <font name="Arial Black"/>
-              <foreground color="-1115649"/>
+              <foreground color="-16777216"/>
               <opaque value="true"/>
               <text value="  GO  "/>
             </properties>

@@ -46,7 +46,8 @@ public class MainForm extends JFrame {
     }
 
 
-    public static void main(String[] args) throws UnknownHostException {
+    public static void main(String[] args) throws UnknownHostException, ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         InetAddress ip = InetAddress.getLocalHost();
         System.out.println(ip.getHostAddress());
         new MainForm();
