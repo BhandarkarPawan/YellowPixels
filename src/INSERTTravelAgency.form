@@ -222,6 +222,19 @@
           <text value="INSERT"/>
         </properties>
       </component>
+      <component id="83712" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="url"/>
+        </properties>
+      </component>
+      <component id="1aea5" class="javax.swing.JTextField" binding="urltextField1">
+        <constraints/>
+        <properties>
+          <minimumSize width="350" height="30"/>
+          <preferredSize width="350" height="30"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

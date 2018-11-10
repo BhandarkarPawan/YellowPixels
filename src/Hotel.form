@@ -2,14 +2,14 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Hotel">
   <grid id="27dc6" binding="root" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
     <constraints>
-      <xy x="137" y="113" width="500" height="390"/>
+      <xy x="137" y="5" width="500" height="537"/>
     </constraints>
     <properties>
       <background color="-404"/>
       <enabled value="true"/>
-      <minimumSize width="500" height="390"/>
+      <minimumSize width="500" height="520"/>
       <opaque value="true"/>
-      <preferredSize width="510" height="390"/>
+      <preferredSize width="500" height="520"/>
       <requestFocusEnabled value="false"/>
       <verifyInputWhenFocusTarget value="true"/>
     </properties>
@@ -256,6 +256,43 @@
           </component>
         </children>
       </scrollpane>
+      <component id="ab26e" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <font name="Arial Black" size="12" style="1"/>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
+          <maximumSize width="404" height="18"/>
+          <minimumSize width="404" height="18"/>
+          <preferredSize width="454" height="18"/>
+          <text value="Enter the number of the hotel you want to search"/>
+        </properties>
+      </component>
+      <component id="e8f4e" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+        <constraints/>
+        <properties>
+          <preferredSize width="150" height="30"/>
+        </properties>
+      </component>
+      <component id="8d092" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <font name="Arial Black" size="12" style="1"/>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
+          <maximumSize width="450" height="18"/>
+          <minimumSize width="450" height="18"/>
+          <preferredSize width="450" height="18"/>
+          <text value="Press the below button to locate your hotel"/>
+        </properties>
+      </component>
+      <component id="912b3" class="javax.swing.JButton" binding="map">
+        <constraints/>
+        <properties>
+          <label value="Map"/>
+          <text value="Map"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
