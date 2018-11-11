@@ -2,20 +2,21 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Hotel">
   <grid id="27dc6" binding="root" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
     <constraints>
-      <xy x="137" y="5" width="500" height="537"/>
+      <xy x="137" y="5" width="500" height="450"/>
     </constraints>
     <properties>
       <background color="-404"/>
       <enabled value="true"/>
-      <minimumSize width="500" height="520"/>
+      <focusable value="true"/>
+      <minimumSize width="500" height="450"/>
       <opaque value="true"/>
-      <preferredSize width="500" height="520"/>
+      <preferredSize width="500" height="450"/>
       <requestFocusEnabled value="false"/>
       <verifyInputWhenFocusTarget value="true"/>
     </properties>
     <border type="none"/>
     <children>
-      <grid id="65f8e" binding="menu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="65f8e" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
           <alignmentX value="0.0"/>
@@ -56,7 +57,7 @@
           <html.disable class="java.lang.Boolean" value="false"/>
         </clientProperties>
       </component>
-      <grid id="aaac5" binding="searchByP" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+      <grid id="aaac5" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints/>
         <properties>
@@ -67,7 +68,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="2e297" binding="details" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="2">
+          <grid id="2e297" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="2">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -233,6 +234,8 @@
         <constraints/>
         <properties>
           <background color="-404"/>
+          <enabled value="true"/>
+          <focusable value="true"/>
           <opaque value="false"/>
           <preferredSize width="500" height="180"/>
           <requestFocusEnabled value="false"/>
@@ -243,7 +246,7 @@
             <constraints/>
             <properties>
               <background color="-404"/>
-              <enabled value="false"/>
+              <enabled value="true"/>
               <focusable value="true"/>
               <font name="Arial" size="14" style="1"/>
               <foreground color="-16777216"/>
@@ -256,41 +259,11 @@
           </component>
         </children>
       </scrollpane>
-      <component id="ab26e" class="javax.swing.JLabel">
+      <component id="6f0df" class="javax.swing.JButton" binding="MAPButton">
         <constraints/>
         <properties>
-          <font name="Arial Black" size="12" style="1"/>
-          <foreground color="-16777216"/>
-          <horizontalAlignment value="0"/>
-          <maximumSize width="404" height="18"/>
-          <minimumSize width="404" height="18"/>
-          <preferredSize width="454" height="18"/>
-          <text value="Enter the number of the hotel you want to search"/>
-        </properties>
-      </component>
-      <component id="e8f4e" class="javax.swing.JTextField" binding="textField1" default-binding="true">
-        <constraints/>
-        <properties>
-          <preferredSize width="150" height="30"/>
-        </properties>
-      </component>
-      <component id="8d092" class="javax.swing.JLabel">
-        <constraints/>
-        <properties>
-          <font name="Arial Black" size="12" style="1"/>
-          <foreground color="-16777216"/>
-          <horizontalAlignment value="0"/>
-          <maximumSize width="450" height="18"/>
-          <minimumSize width="450" height="18"/>
-          <preferredSize width="450" height="18"/>
-          <text value="Press the below button to locate your hotel"/>
-        </properties>
-      </component>
-      <component id="912b3" class="javax.swing.JButton" binding="map">
-        <constraints/>
-        <properties>
-          <label value="Map"/>
-          <text value="Map"/>
+          <preferredSize width="78" height="30"/>
+          <text value="MAP"/>
         </properties>
       </component>
     </children>

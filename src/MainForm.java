@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Objects;
 
 public class MainForm extends JFrame {
 
@@ -13,7 +14,7 @@ public class MainForm extends JFrame {
         GOButton.addActionListener(e -> {
 
             try {
-                switch (categoryCB.getSelectedItem().toString()) {
+                switch (Objects.requireNonNull(categoryCB.getSelectedItem()).toString()) {
 
                     case "TRAVEL AGENCY":
                         new TravelAgency();
@@ -46,8 +47,8 @@ public class MainForm extends JFrame {
     }
 
 
-    public static void main(String[] args) throws UnknownHostException, ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
-        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+    public static void main(String[] args) throws UnknownHostException {
+        //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         InetAddress ip = InetAddress.getLocalHost();
         System.out.println(ip.getHostAddress());
         new MainForm();

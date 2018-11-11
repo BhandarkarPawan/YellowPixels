@@ -1,27 +1,20 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.*;
+import java.util.Objects;
 
 public class Hospital extends JFrame {
     private JPanel root;
-    private JPanel menu;
-    private JLabel image;
-    private JPanel searchByP;
-    private JPanel details;
+
     private JTextField locationTextField;
     private JTextField hospitalTextField;
     private JButton SEARCHButton;
     private JTable resultsTable;
     private JComboBox specializationCB;
     private JButton INSERTButton;
-    private JTextField textField1;
-    private JLabel label1;
-    private JButton map;
-    private JTextField textField2;
+    private JButton MAPButton;
+    private  long numberToLocate;
 
     private Statement stm;
     private ResultSet rs;
@@ -29,12 +22,12 @@ public class Hospital extends JFrame {
     private String PHONE_NUM = "PHONE NUMBER";
     private String HOSPITAL = "HOSPITAL";
 
-    private String HAS_NEURO = "NEURO?";
-    private String HAS_ORTHO = "ORTHO?";
-    private String HAS_NEPHRO = "NEPHRO?";
-    private String HAS_CARDIO = "CARDIO?";
+//    private String HAS_NEURO = "NEURO?";
+//    private String HAS_ORTHO = "ORTHO?";
+//    private String HAS_NEPHRO = "NEPHRO?";
+//    private String HAS_CARDIO = "CARDIO?";
 
-    private String[] COLUMNS = {PHONE_NUM, HOSPITAL, HAS_NEURO, HAS_ORTHO, HAS_CARDIO, HAS_NEPHRO};
+    private String[] COLUMNS = {PHONE_NUM, HOSPITAL};//, HAS_NEURO, HAS_ORTHO, HAS_CARDIO, HAS_NEPHRO};
 
     Hospital() throws Exception{
 
@@ -44,15 +37,11 @@ public class Hospital extends JFrame {
 
         stm = con.createStatement();
 
-        INSERTButton.addActionListener(new ActionListener() {
-            @Override
-
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    new INSERTHospital(stm);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
+        INSERTButton.addActionListener(e -> {
+            try {
+                new HospitalInsert(stm);
+            } catch (Exception e1) {
+                e1.printStackTrace();
             }
         });
 
@@ -63,7 +52,7 @@ public class Hospital extends JFrame {
 
             String Hospital = hospitalTextField.getText().trim();
             String Location = locationTextField.getText().trim();
-            String Specialization = specializationCB.getSelectedItem().toString();
+            String Specialization = Objects.requireNonNull(specializationCB.getSelectedItem()).toString();
 
 
             System.out.println("Hospital: "+  Hospital + "Specialization:" + Specialization+";");
@@ -73,7 +62,7 @@ public class Hospital extends JFrame {
                 sql.append(" WHERE");
 
                 if(!Hospital.equals("")){
-                    sql.append(" name='").append(Hospital).append("'");
+                    sql.append(" name LIKE'%").append(Hospital).append("%'");
                     if(!Specialization.equals("Any") || !Location.equals(""))
                         sql.append(" AND");
                 }
@@ -135,30 +124,48 @@ public class Hospital extends JFrame {
             model.setColumnIdentifiers(COLUMNS);
             resultsTable.setModel(model);
 
+            resultsTable.getSelectionModel().addListSelectionListener(event -> {
+                if (resultsTable.getSelectedRow() > -1) {
+                    // print first column value from selected row
+                    numberToLocate = Long.parseLong(resultsTable.getValueAt(resultsTable.getSelectedRow(), 0).toString());
+                }
+            });
+
             // This will center the values in each cell of the JTable
             TableCellRenderer renderer = resultsTable.getDefaultRenderer(String.class);
             ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
 
         });
+        MAPButton.addActionListener(e -> {
+                    String query = "select * from Main_table where category='Hospital' and phone_num="+numberToLocate;
+                    String URL = "";
 
-        map.addActionListener(e -> {
-                    String text=textField1.getText();
-                    String x = "select * from Main_table where category='Hospital' and phone_num="+text;
-                    String q = "";
+
                     try
-                    {   rs = stm.executeQuery(x);
-                        while(rs.next()) {
-                            q = (rs.getString(5));
-                            System.out.println(q);
+                    {   rs = stm.executeQuery(query);
+                        if(!rs.next() ){
+                            JOptionPane.showMessageDialog(null, "No such entry exists in the database");
                         }
-                        java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
+                        rs.previous();
+
+                        while(rs.next()){
+                            URL = (rs.getString(5));
+                            System.out.println(URL);
+                        }
+                        if(URL.equals(""))
+                            JOptionPane.showMessageDialog(null, "No URL has been set for that location");
+
+                        else{
+                            java.awt.Desktop.getDesktop().browse(java.net.URI.create(URL));
+                            numberToLocate = -1;
+                        }
                     } catch (Exception ee) {
                         JOptionPane.showMessageDialog(this, "Error");
                     }
                 }
-                );
+        );
 
-
+        SEARCHButton.doClick();
         setContentPane(root);
         setResizable(false);
         pack();

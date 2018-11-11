@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="INSERTShops">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="IndividualInsert">
   <grid id="27dc6" binding="root" layout-manager="FlowLayout" hgap="5" vgap="10" flow-align="1">
     <constraints>
-      <xy x="20" y="20" width="500" height="300"/>
+      <xy x="142" y="80" width="500" height="320"/>
     </constraints>
     <properties>
       <background color="-404"/>
-      <minimumSize width="500" height="300"/>
-      <preferredSize width="500" height="300"/>
+      <minimumSize width="500" height="320"/>
+      <opaque value="true"/>
+      <preferredSize width="500" height="320"/>
     </properties>
     <border type="none"/>
     <children>
-      <grid id="ec08b" binding="menu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="891d2" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints/>
         <properties>
           <alignmentX value="0.0"/>
@@ -22,7 +23,7 @@
           <color color="-16777216"/>
         </border>
         <children>
-          <component id="6e738" class="javax.swing.JLabel">
+          <component id="79b46" class="javax.swing.JLabel">
             <constraints/>
             <properties>
               <font name="Arial Black" size="16" style="1"/>
@@ -30,28 +31,28 @@
               <text value="INSERT"/>
             </properties>
           </component>
-          <component id="7e1b3" class="javax.swing.JLabel">
+          <component id="4e5a4" class="javax.swing.JLabel">
             <constraints/>
             <properties>
-              <icon value="shop.png"/>
+              <icon value="people.png"/>
               <text value=""/>
             </properties>
           </component>
         </children>
       </grid>
-      <grid id="9ba28" binding="searchByP" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+      <grid id="52a76" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints/>
         <properties>
           <background color="-256"/>
           <foreground color="-16777216"/>
-          <minimumSize width="363" height="125"/>
+          <minimumSize width="371" height="160"/>
           <opaque value="false"/>
-          <preferredSize width="500" height="125"/>
+          <preferredSize width="500" height="160"/>
         </properties>
         <border type="none"/>
         <children>
-          <grid id="e9bda" binding="details" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="2">
+          <grid id="80875" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="2">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -64,7 +65,7 @@
               <title-color color="-16777216"/>
             </border>
             <children>
-              <component id="db8ec" class="javax.swing.JLabel">
+              <component id="47b5d" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -73,10 +74,10 @@
                   <focusable value="true"/>
                   <font name="Arial Black"/>
                   <foreground color="-16777216"/>
-                  <text value="Shop"/>
+                  <text value="First Name "/>
                 </properties>
               </component>
-              <component id="19d31" class="javax.swing.JLabel">
+              <component id="9a286" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -86,10 +87,10 @@
                   <focusable value="false"/>
                   <font name="Arial Black"/>
                   <foreground color="-16777216"/>
-                  <text value="    Location   "/>
+                  <text value="Last Name "/>
                 </properties>
               </component>
-              <component id="55ae" class="javax.swing.JTextField" binding="locationTextField">
+              <component id="8bb1f" class="javax.swing.JTextField" binding="LNameTextField">
                 <constraints>
                   <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -100,7 +101,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="f8d50" class="javax.swing.JTextField" binding="shopTextField">
+              <component id="6bb21" class="javax.swing.JTextField" binding="FNameTextField">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -111,7 +112,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="c5c4e" class="javax.swing.JTextField" binding="phoneNumberTextField">
+              <component id="3d5bc" class="javax.swing.JTextField" binding="phoneNumberTextField">
                 <constraints>
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -122,7 +123,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="dc132" class="javax.swing.JLabel">
+              <component id="ecd6" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -135,9 +136,33 @@
                   <text value="Phone No."/>
                 </properties>
               </component>
+              <component id="d000a" class="javax.swing.JTextField" binding="locationTextField">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <opaque value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="f9358" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <alignmentX value="0.5"/>
+                  <focusTraversalPolicyProvider value="true"/>
+                  <focusable value="false"/>
+                  <font name="Arial Black"/>
+                  <foreground color="-16777216"/>
+                  <text value="Location"/>
+                </properties>
+              </component>
             </children>
           </grid>
-          <grid id="3bf9b" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="9fd44" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -149,82 +174,81 @@
               <title-color color="-16777216"/>
             </border>
             <children>
-              <component id="afcd7" class="javax.swing.JLabel">
+              <component id="8a0b5" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="3" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <focusable value="false"/>
-                  <font name="Arial Black" size="12"/>
+                  <font name="Arial Black"/>
                   <foreground color="-16777216"/>
-                  <text value="Category"/>
+                  <text value="Field of Work"/>
                 </properties>
               </component>
-              <component id="b3033" class="javax.swing.JRadioButton" binding="mallRadioButton" default-binding="true">
+              <component id="1b25a" class="javax.swing.JComboBox" binding="categoryComboBox">
                 <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Mall"/>
-                </properties>
-              </component>
-              <component id="e823b" class="javax.swing.JRadioButton" binding="floristRadioButton" default-binding="true">
-                <constraints>
-                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Florist"/>
-                </properties>
-              </component>
-              <component id="e26da" class="javax.swing.JRadioButton" binding="groceryradioButton">
-                <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <label value="Grocery"/>
-                  <text value="Grocery"/>
-                </properties>
-              </component>
-              <component id="a3192" class="javax.swing.JRadioButton" binding="electronicsradioButton">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <label value="Electronics"/>
-                  <text value="Electronics"/>
-                </properties>
-              </component>
-              <component id="a2670" class="javax.swing.JRadioButton" binding="jewelleryradioButton">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <label value="Jewellery"/>
-                  <text value="Jewellery"/>
+                  <model>
+                    <item value="Hospital"/>
+                    <item value="Hotel"/>
+                    <item value="Shops"/>
+                    <item value="Travel Agency"/>
+                  </model>
                 </properties>
               </component>
             </children>
           </grid>
         </children>
       </grid>
-      <component id="e7c47" class="javax.swing.JButton" binding="INSERTButton">
+      <grid id="247e3" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints/>
+        <properties>
+          <minimumSize width="500" height="34"/>
+          <opaque value="false"/>
+          <preferredSize width="500" height="34"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="1c845" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial Black"/>
+              <foreground color="-16777216"/>
+              <text value="  URL  "/>
+            </properties>
+          </component>
+          <component id="cefea" class="javax.swing.JButton" binding="MAPButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="MAP"/>
+            </properties>
+          </component>
+          <component id="4362c" class="javax.swing.JTextField" binding="urlTextField">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="100" height="34"/>
+              </grid>
+            </constraints>
+            <properties>
+              <minimumSize width="350" height="30"/>
+              <opaque value="true"/>
+              <preferredSize width="350" height="30"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="eb050" class="javax.swing.JButton" binding="INSERTButton">
         <constraints/>
         <properties>
           <horizontalTextPosition value="0"/>
           <text value="INSERT"/>
-        </properties>
-      </component>
-      <component id="1e53b" class="javax.swing.JLabel">
-        <constraints/>
-        <properties>
-          <text value="url"/>
-        </properties>
-      </component>
-      <component id="baad7" class="javax.swing.JTextField" binding="urltextField1">
-        <constraints/>
-        <properties>
-          <minimumSize width="350" height="30"/>
-          <preferredSize width="350" height="30"/>
         </properties>
       </component>
     </children>

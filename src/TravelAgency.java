@@ -1,31 +1,22 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
 
 public class TravelAgency extends JFrame{
     private JPanel root;
     private JTable resultsTable;
-    private JPanel menu;
-    private JLabel image;
     private JTextField locationTextField;
     private JTextField agencyTextField;
     private JCheckBox busCheckBox;
     private JCheckBox planeCheckBox;
     private JCheckBox trainCheckBox;
     private JCheckBox carCheckBox;
-    private JPanel travelModes;
-    private JPanel details;
-    private JPanel searchByP;
     private JButton SEARCHButton;
     private JCheckBox internationalCheckBox;
     private JButton INSERTButton;
-    private JTextField textField1;
-    private JButton map;
+    private JButton MAPButton;
 
     private Statement stm;
     private ResultSet rs;
@@ -33,13 +24,14 @@ public class TravelAgency extends JFrame{
     private String PHONE_NUM = "PHONE NUMBER";
     private String AGENCY = "AGENCY";
 
-    private String HAS_BUS = "BUS?";
-    private String HAS_TRAIN = "TRAIN?";
-    private String HAS_CAR = "CAR?";
-    private String HAS_PLANE = "PLANE?";
-    private String HAS_INTERNATIONAL  = "INTERNATIONAL?";
+//    private String HAS_BUS = "BUS?";
+//    private String HAS_TRAIN = "TRAIN?";
+//    private String HAS_CAR = "CAR?";
+//    private String HAS_PLANE = "PLANE?";
+//    private String HAS_INTERNATIONAL  = "INTERNATIONAL?";
+    private long numberToLocate;
 
-    private String[] COLUMNS = {PHONE_NUM, AGENCY,HAS_BUS,HAS_TRAIN,HAS_CAR,HAS_PLANE,HAS_INTERNATIONAL};
+    private String[] COLUMNS = {PHONE_NUM, AGENCY};//,HAS_BUS,HAS_TRAIN,HAS_CAR,HAS_PLANE,HAS_INTERNATIONAL};
 
     TravelAgency() throws Exception{
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
@@ -47,14 +39,11 @@ public class TravelAgency extends JFrame{
         con.setAutoCommit(true);
         stm = con.createStatement();
 
-        INSERTButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    new INSERTTravelAgency(stm);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
+        INSERTButton.addActionListener(e -> {
+            try {
+                new TravelAgencyInsert(stm);
+            } catch (Exception e1) {
+                e1.printStackTrace();
             }
         });
 
@@ -94,7 +83,7 @@ public class TravelAgency extends JFrame{
                 sql.append(" WHERE");
 
                 if(!Agency.equals("")){
-                    sql.append(" name='").append(Agency).append("'");
+                    sql.append(" name LIKE'%").append(Agency).append("%'");
                     if(!TravelModes.equals("") || !Location.equals(""))
                         sql.append(" AND");
                 }
@@ -130,42 +119,56 @@ public class TravelAgency extends JFrame{
                     }while (rs.next());
                 }
 
-                while (rs.next()){
-                    row = new Object[COLUMNS.length];
-                    for(int i=1; i<=COLUMNS.length;i++)
-                        row[i-1] = rs.getObject(i);
-                    model.addRow(row);
-                }
             } catch (SQLException e1) {
                 e1.printStackTrace();
             }
 
             model.setColumnIdentifiers(COLUMNS);
+
             resultsTable.setModel(model);
+
+            resultsTable.getSelectionModel().addListSelectionListener(event -> {
+                if (resultsTable.getSelectedRow() > -1) {
+                    // print first column value from selected row
+                     numberToLocate = Long.parseLong(resultsTable.getValueAt(resultsTable.getSelectedRow(), 0).toString());
+                }
+            });
 
             // This will center the values in each cell of the JTable
             TableCellRenderer renderer = resultsTable.getDefaultRenderer(String.class);
             ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
 
         });
-        map.addActionListener(e -> {
-                    String text=textField1.getText();
-                    String x = "select * from Main_table where category='Travel_agency' and phone_num="+text;
-                    String q = "";
+        MAPButton.addActionListener(e -> {
+                    String query = "select * from Main_table where category='Travel_agency' and phone_num="+numberToLocate;
+                    String URL = "";
+
+
                     try
-                    {   rs = stm.executeQuery(x);
-                        while(rs.next()) {
-                            q = (rs.getString(5));
-                            System.out.println(q);
+                    {   rs = stm.executeQuery(query);
+                        if(!rs.next() ){
+                            JOptionPane.showMessageDialog(null, "No such entry exists in the database");
                         }
-                        java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
+                        rs.previous();
+
+                        while(rs.next()){
+                            URL = (rs.getString(5));
+                            System.out.println(URL);
+                        }
+                        if(URL.equals(""))
+                            JOptionPane.showMessageDialog(null, "No URL has been set for that location");
+
+                        else{
+                            java.awt.Desktop.getDesktop().browse(java.net.URI.create(URL));
+                            numberToLocate = -1;
+                        }
                     } catch (Exception ee) {
                         JOptionPane.showMessageDialog(this, "Error");
                     }
                 }
         );
 
-
+        SEARCHButton.doClick();
         setContentPane(root);
         setResizable(false);
         pack();

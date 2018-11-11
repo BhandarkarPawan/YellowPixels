@@ -1,15 +1,10 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.*;
-import java.util.ArrayList;
 
 public class Hotel extends JFrame{
-    private JPanel menu;
-    private JPanel searchByP;
-    private JPanel details;
+
     private JTextField locationTextField;
     private JTextField hotelTextField;
     private JButton SEARCHButton;
@@ -19,17 +14,17 @@ public class Hotel extends JFrame{
     private JCheckBox homeDeliveryCheckBox;
     private JTable resultsTable;
     private JButton INSERTButton;
-    private JTextField textField1;
-    private JButton map;
+    private JButton MAPButton;
     private Statement stm;
     private ResultSet rs;
+    private  long numberToLocate;
 
     private String PHONE_NUM = "PHONE NUMBER";
     private String HOTEL = "HOTEL";
     private String HAS_NONVEG = "NON-VEG?";
-    private String HOME_DELIVERY = "HOMEDELIVERY?";
+    //private String HOME_DELIVERY = "HOME DELIVERY?";
 
-    private String[] COLUMNS = {PHONE_NUM, HOTEL, HAS_NONVEG, HOME_DELIVERY};
+    private String[] COLUMNS = {PHONE_NUM, HOTEL, HAS_NONVEG};//, HOME_DELIVERY};
 
     Hotel() throws Exception{
 
@@ -45,14 +40,11 @@ public class Hotel extends JFrame{
 
         stm = con.createStatement();
 
-        INSERTButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    new INSERTHotel(stm);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
+        INSERTButton.addActionListener(e -> {
+            try {
+                new HotelInsert(stm);
+            } catch (Exception e1) {
+                e1.printStackTrace();
             }
         });
 
@@ -69,7 +61,7 @@ public class Hotel extends JFrame{
              // Check if the user has entered anything in the search fields
 
                 if(!Hotel.equals(""))
-                    sql.append(" name='").append(Hotel).append("' AND");
+                    sql.append(" name LIKE'%").append(Hotel).append("%' AND");
                 if(homeDeliveryCheckBox.isSelected())
                     sql.append(" has_homedelivery = true AND");
                 if(!Location.equals("")){
@@ -115,22 +107,41 @@ public class Hotel extends JFrame{
                 model.setColumnIdentifiers(COLUMNS);
                 resultsTable.setModel(model);
 
-                // This will center the values in each cell of the JTable
-                TableCellRenderer renderer = resultsTable.getDefaultRenderer(String.class);
-                ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
+            resultsTable.getSelectionModel().addListSelectionListener(event -> {
+                if (resultsTable.getSelectedRow() > -1) {
+                    // print first column value from selected row
+                    numberToLocate = Long.parseLong(resultsTable.getValueAt(resultsTable.getSelectedRow(), 0).toString());
+                }
+            });
+
+            // This will center the values in each cell of the JTable
+            TableCellRenderer renderer = resultsTable.getDefaultRenderer(String.class);
+            ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
 
         });
-        map.addActionListener(e -> {
-                    String text=textField1.getText();
-                    String x = "select * from Main_table where category='Hotel' and phone_num="+text;
-                    String q = "";
+        MAPButton.addActionListener(e -> {
+                    String query = "select * from Main_table where category='Hotel' and phone_num="+numberToLocate;
+                    String URL = "";
+
+
                     try
-                    {   rs = stm.executeQuery(x);
-                        while(rs.next()) {
-                            q = (rs.getString(5));
-                            System.out.println(q);
+                    {   rs = stm.executeQuery(query);
+                        if(!rs.next() ){
+                            JOptionPane.showMessageDialog(null, "No such entry exists in the database");
                         }
-                        java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
+                        rs.previous();
+
+                        while(rs.next()){
+                            URL = (rs.getString(5));
+                            System.out.println(URL);
+                        }
+                        if(URL.equals(""))
+                            JOptionPane.showMessageDialog(null, "No URL has been set for that location");
+
+                        else{
+                            java.awt.Desktop.getDesktop().browse(java.net.URI.create(URL));
+                            numberToLocate = -1;
+                        }
                     } catch (Exception ee) {
                         JOptionPane.showMessageDialog(this, "Error");
                     }
@@ -138,6 +149,7 @@ public class Hotel extends JFrame{
         );
 
 
+        SEARCHButton.doClick();
         setContentPane(root);
         setResizable(false);
         pack();

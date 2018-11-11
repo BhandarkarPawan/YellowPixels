@@ -1,14 +1,10 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.*;
+import java.util.Objects;
 
 public class Shops extends JFrame {
-    private JPanel menu;
-    private JPanel searchByP;
-    private JPanel details;
     private JTextField locationTextField;
     private JTextField shopTextField;
     private JButton SEARCHButton;
@@ -16,18 +12,18 @@ public class Shops extends JFrame {
     private JComboBox shopCategoryCB;
     private JTable resultsTable;
     private JButton INSERTButton;
-    private JTextField textField1;
-    private JButton map;
+    private JButton MAPButton;
 
     private Statement stm;
     private ResultSet rs;
+    private long numberToLocate;
 
     private String PHONE_NUM = "PHONE NUMBER";
-    private String HOSPITAL = "SHOP NAME";
+    private String SHOP = "SHOP NAME";
 
     private String SHOP_TYPE = "SHOP TYPE";
 
-    private String[] COLUMNS = {PHONE_NUM, HOSPITAL,SHOP_TYPE};
+    private String[] COLUMNS = {PHONE_NUM, SHOP,SHOP_TYPE};
 
     Shops() throws Exception{
 
@@ -37,14 +33,11 @@ public class Shops extends JFrame {
 
         stm = con.createStatement();
 
-        INSERTButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    new INSERTShops(stm);
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
+        INSERTButton.addActionListener(e -> {
+            try {
+                new ShopsInsert(stm);
+            } catch (Exception e1) {
+                e1.printStackTrace();
             }
         });
 
@@ -55,7 +48,7 @@ public class Shops extends JFrame {
 
             String Shop = shopTextField.getText().trim();
             String Location = locationTextField.getText().trim();
-            String ShopCategory = shopCategoryCB.getSelectedItem().toString();
+            String ShopCategory = Objects.requireNonNull(shopCategoryCB.getSelectedItem()).toString();
 
 
             System.out.println("Shop: "+  Shop + "ShopCategory:" + ShopCategory+";");
@@ -65,12 +58,12 @@ public class Shops extends JFrame {
                 sql.append(" WHERE");
 
                 if(!Shop.equals("")){
-                    sql.append(" name ='").append(Shop).append("'");
+                    sql.append(" name LIKE'%").append(Shop).append("%'");
                     if(!ShopCategory.equals("Any"))
                         sql.append(" AND");
                 }
                 if(!ShopCategory.equals("Any")){
-                    sql.append( " shop_type = '" + ShopCategory +"'");
+                    sql.append(" shop_type = '").append(ShopCategory).append("'");
                     if(!Location.equals(""))
                         sql.append(" AND");
                 }
@@ -112,29 +105,47 @@ public class Shops extends JFrame {
             model.setColumnIdentifiers(COLUMNS);
             resultsTable.setModel(model);
 
+            resultsTable.getSelectionModel().addListSelectionListener(event -> {
+                if (resultsTable.getSelectedRow() > -1) {
+                    // print first column value from selected row
+                    numberToLocate = Long.parseLong(resultsTable.getValueAt(resultsTable.getSelectedRow(), 0).toString());
+                }
+            });
+
             // This will center the values in each cell of the JTable
             TableCellRenderer renderer = resultsTable.getDefaultRenderer(String.class);
             ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
 
         });
-        map.addActionListener(e -> {
-                    String text=textField1.getText();
-                    String x = "select * from Main_table where category='Shops' and phone_num="+text;
-                    String q = "";
+        MAPButton.addActionListener(e -> {
+                    String query = "select * from Main_table where category='Shops' and phone_num="+numberToLocate;
+                    String URL = "";
+
+
                     try
-                    {   rs = stm.executeQuery(x);
-                        while(rs.next()) {
-                            q = (rs.getString(5));
-                            System.out.println(q);
+                    {   rs = stm.executeQuery(query);
+                        if(!rs.next() ){
+                            JOptionPane.showMessageDialog(null, "No such entry exists in the database");
                         }
-                        java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
+                        rs.previous();
+                        while(rs.next()){
+                            URL = (rs.getString(5));
+                            System.out.println(URL);
+                        }
+                        if(URL.equals(""))
+                            JOptionPane.showMessageDialog(null, "No URL has been set for that location");
+
+                        else{
+                            java.awt.Desktop.getDesktop().browse(java.net.URI.create(URL));
+                            numberToLocate = -1;
+                        }
                     } catch (Exception ee) {
                         JOptionPane.showMessageDialog(this, "Error");
                     }
                 }
         );
 
-
+        SEARCHButton.doClick();
         setContentPane(root);
         setResizable(false);
         pack();

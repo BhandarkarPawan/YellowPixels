@@ -1,27 +1,22 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.*;
+import java.util.Objects;
 
 public class Individual extends JFrame{
-    private JPanel JPanel;
-    private JPanel searchByP;
-    private JPanel details;
+
     private JTextField LNameTextField;
     private JTextField FNameTextField;
-    private JComboBox worksForCB;
     private JButton SEARCHButton;
     private JTable resultsTable;
     private JPanel root;
-    private JLabel Name;
     private JButton INSERTButton;
-    private JTextField textField1;
-    private JButton map;
+    private JButton MAPButton;
+    private JComboBox worksForCB;
     private ResultSet rs;
     private Statement stm;
-
+    private long numberToLocate;
     private String PHONE_NUM = "PHONE NUMBER";
     private String FNAME = "FIRST NAME";
     private String LNAME = "LAST NAME";
@@ -39,14 +34,11 @@ public class Individual extends JFrame{
 
             stm = con.createStatement();
 
-            INSERTButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    try {
-                        new INSERTIndividual(stm);
-                    } catch (Exception e1) {
-                        e1.printStackTrace();
-                    }
+            INSERTButton.addActionListener(e -> {
+                try {
+                    new IndividualInsert(stm);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
                 }
             });
 
@@ -57,21 +49,31 @@ public class Individual extends JFrame{
 
                 String FName = FNameTextField.getText().trim();
                 String LName = LNameTextField.getText().trim();
-
+                String fieldOfWork = Objects.requireNonNull(worksForCB.getSelectedItem()).toString();
                 System.out.println("First Name: "+  FName + " Last Name: " + LName);
 
-                if(!FName.equals("") || !LName.equals("")){
+                if(!FName.equals("") || !LName.equals("")|| !fieldOfWork.equals("Any")) {
                     // Check if the user has entered anything in the search fields
 
                     sql.append(" WHERE");
                     if(!FName.equals("")){
-                        sql.append(" FName='").append(FName).append("'");
+                        sql.append(" FName LIKE'%").append(FName).append("%'");
                         if(!LName.equals("")){
                             sql.append(" AND");
                         }
                     }
                     if(!LName.equals("")){
-                        sql.append(" LName ='").append(LName).append("'");
+                        if(!LName.equals("")) {
+                            sql.append(" LName LIKE'%").append(LName).append("%'");
+                        }
+
+                        if(!fieldOfWork.equals("Any")){
+                            sql.append(" AND");
+                        }
+                    }
+
+                    if(!fieldOfWork.equals("Any")){
+                        sql.append(" Works_for = '").append(fieldOfWork).append("'");
                     }
                     sql.append(";");
                 }
@@ -101,21 +103,41 @@ public class Individual extends JFrame{
                 model.setColumnIdentifiers(COLUMNS);
                 resultsTable.setModel(model);
 
+                resultsTable.getSelectionModel().addListSelectionListener(event -> {
+                    if (resultsTable.getSelectedRow() > -1) {
+                        // print first column value from selected row
+                        numberToLocate = Long.parseLong(resultsTable.getValueAt(resultsTable.getSelectedRow(), 0).toString());
+                    }
+                });
+
                 // This will center the values in each cell of the JTable
                 TableCellRenderer renderer = resultsTable.getDefaultRenderer(String.class);
                 ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
+
             });
-            map.addActionListener(e -> {
-                        String text=textField1.getText();
-                        String x = "select * from Main_table where category='Individual' and phone_num="+text;
-                        String q = "";
+            MAPButton.addActionListener(e -> {
+                        String query = "select * from Main_table where category='Individual' and phone_num="+numberToLocate;
+                        String URL = "";
+
+
                         try
-                        {   rs = stm.executeQuery(x);
-                            while(rs.next()) {
-                                q = (rs.getString(5));
-                                System.out.println(q);
+                        {   rs = stm.executeQuery(query);
+                            if(!rs.next() ){
+                                JOptionPane.showMessageDialog(null, "No such entry exists in the database");
                             }
-                            java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
+                            rs.previous();
+
+                            while(rs.next()){
+                                URL = (rs.getString(5));
+                                System.out.println(URL);
+                            }
+                            if(URL.equals(""))
+                                JOptionPane.showMessageDialog(null, "No URL has been set for that location");
+
+                            else{
+                                java.awt.Desktop.getDesktop().browse(java.net.URI.create(URL));
+                                numberToLocate = -1;
+                            }
                         } catch (Exception ee) {
                             JOptionPane.showMessageDialog(this, "Error");
                         }
@@ -128,7 +150,7 @@ public class Individual extends JFrame{
             e.printStackTrace();
         }
 
-
+        SEARCHButton.doClick();
         setContentPane(root);
         pack();
         setResizable(false);
