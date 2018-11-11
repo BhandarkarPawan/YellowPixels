@@ -16,6 +16,8 @@ public class Shops extends JFrame {
     private JComboBox shopCategoryCB;
     private JTable resultsTable;
     private JButton INSERTButton;
+    private JTextField textField1;
+    private JButton map;
 
     private Statement stm;
     private ResultSet rs;
@@ -31,14 +33,18 @@ public class Shops extends JFrame {
 
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
                 "root", "root123");
-        con.setAutoCommit(false);
+        con.setAutoCommit(true);
 
         stm = con.createStatement();
 
         INSERTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new INSERTShops(stm);
+                try {
+                    new INSERTShops(stm);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
             }
         });
 
@@ -64,7 +70,7 @@ public class Shops extends JFrame {
                         sql.append(" AND");
                 }
                 if(!ShopCategory.equals("Any")){
-                    sql.append( " shop_type = '" + ShopCategory);
+                    sql.append( " shop_type = '" + ShopCategory +"'");
                     if(!Location.equals(""))
                         sql.append(" AND");
                 }
@@ -111,6 +117,22 @@ public class Shops extends JFrame {
             ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
 
         });
+        map.addActionListener(e -> {
+                    String text=textField1.getText();
+                    String x = "select * from Main_table where category='Shops' and phone_num="+text;
+                    String q = "";
+                    try
+                    {   rs = stm.executeQuery(x);
+                        while(rs.next()) {
+                            q = (rs.getString(5));
+                            System.out.println(q);
+                        }
+                        java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
+                    } catch (Exception ee) {
+                        JOptionPane.showMessageDialog(this, "Error");
+                    }
+                }
+        );
 
 
         setContentPane(root);

@@ -2,21 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e5714ad-24e7-4310-ae00-c3ddafa6fb32" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTHospital.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTHospital.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTHotel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTHotel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTIndividual.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTIndividual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTShops.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTShops.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTTravelAgency.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/INSERTTravelAgency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/sql1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/sql1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Hospital$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Hospital$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Hospital.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Hospital.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Hotel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Individual.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/MainForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/MainForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/Shops.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/Shops.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/TravelAgency.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/TravelAgency.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/airplane.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/airplane.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/hotel.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/hotel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/people.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/people.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YellowPixels/shop.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/YellowPixels/shop.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hotel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hotel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Individual.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Individual.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Individual.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shops.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shops.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TravelAgency.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/TravelAgency.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TravelAgency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TravelAgency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/airplane.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/airplane.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hotel.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/hotel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/people.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/people.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shop.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,52 +53,46 @@
     <session id="2007652164">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="form" value="2" />
-          <entry key="java" value="8" />
+          <entry key="form" value="20" />
+          <entry key="java" value="47" />
           <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="GUI_DESIGNER_FORM" value="2" />
+          <entry key="GUI_DESIGNER_FORM" value="20" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="702" />
+          <entry key="java" value="3603" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="702" />
+          <entry key="JAVA" value="3603" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Hospital.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Hospital.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -95,29 +113,29 @@
         <option value="$PROJECT_DIR$/src/HotelForm.java" />
         <option value="$PROJECT_DIR$/src/test.form" />
         <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/Hotel.form" />
-        <option value="$PROJECT_DIR$/src/Individual.form" />
-        <option value="$PROJECT_DIR$/src/Shops.form" />
-        <option value="$PROJECT_DIR$/src/TravelAgency.form" />
         <option value="$PROJECT_DIR$/src/InsertForm.form" />
+        <option value="$PROJECT_DIR$/src/MainForm.java" />
+        <option value="$PROJECT_DIR$/src/MainForm.form" />
+        <option value="$PROJECT_DIR$/src/Hospital.form" />
+        <option value="$PROJECT_DIR$/src/TravelAgency.form" />
+        <option value="$PROJECT_DIR$/src/Shops.form" />
+        <option value="$PROJECT_DIR$/src/Individual.form" />
+        <option value="$PROJECT_DIR$/src/Hotel.form" />
         <option value="$PROJECT_DIR$/src/INSERTHospital.form" />
+        <option value="$PROJECT_DIR$/src/Hospital.java" />
         <option value="$PROJECT_DIR$/src/INSERTHotel.form" />
         <option value="$PROJECT_DIR$/src/INSERTIndividual.form" />
         <option value="$PROJECT_DIR$/src/INSERTShops.form" />
         <option value="$PROJECT_DIR$/src/INSERTTravelAgency.form" />
-        <option value="$PROJECT_DIR$/src/TravelAgency.java" />
-        <option value="$PROJECT_DIR$/src/Shops.java" />
-        <option value="$PROJECT_DIR$/src/Hotel.java" />
-        <option value="$PROJECT_DIR$/src/Individual.java" />
         <option value="$PROJECT_DIR$/src/INSERTHospital.java" />
         <option value="$PROJECT_DIR$/src/INSERTHotel.java" />
+        <option value="$PROJECT_DIR$/src/INSERTIndividual.java" />
         <option value="$PROJECT_DIR$/src/INSERTShops.java" />
         <option value="$PROJECT_DIR$/src/INSERTTravelAgency.java" />
-        <option value="$PROJECT_DIR$/src/INSERTIndividual.java" />
-        <option value="$PROJECT_DIR$/src/MainForm.java" />
-        <option value="$PROJECT_DIR$/src/MainForm.form" />
-        <option value="$PROJECT_DIR$/src/Hospital.form" />
-        <option value="$PROJECT_DIR$/src/Hospital.java" />
+        <option value="$PROJECT_DIR$/src/TravelAgency.java" />
+        <option value="$PROJECT_DIR$/src/Shops.java" />
+        <option value="$PROJECT_DIR$/src/Individual.java" />
+        <option value="$PROJECT_DIR$/src/Hotel.java" />
       </list>
     </option>
   </component>
@@ -129,7 +147,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
-    <option name="y" value="-34" />
+    <option name="y" value="-35" />
     <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
@@ -139,8 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -154,10 +170,17 @@
               <item name="YellowPixels" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="YellowPixels" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YellowPixels" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Hospital" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,11 +191,12 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="320" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541697715192" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-8.0.12/mysql-connector-java-8.0.12.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541876999837" />
+    <property name="last_opened_file_path" value="D:/NETBEANS/jar_files/mysql-connector-java-8.0.12" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -196,10 +220,13 @@
       <option name="MAIN_CLASS_NAME" value="MainForm" />
       <module name="YellowPixels" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -207,48 +234,21 @@
       <option name="MAIN_CLASS_NAME" value="test" />
       <module name="YellowPixels" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -293,70 +293,69 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49932885" weight="0.32905984" />
-      <window_info id="DB Browser" order="7" />
-      <window_info anchor="bottom" id="Messages" order="5" weight="0.32763532" />
-      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info id="Designer" order="0" />
+      <window_info x="796" y="77" width="491" height="702" id="UI Designer" order="1" type="FLOATING" weight="0.3295302" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.22281879" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="7" />
+      <window_info id="Learn" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49932885" weight="0.32905984" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50067115" side_tool="true" weight="0.32867134" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32867134" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.2979021" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.3988604" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="bottom" id="DB Execution Console" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50067115" side_tool="true" weight="0.32867134" />
-      <window_info anchor="right" auto_hide="true" id="Maven Projects" order="3" weight="0.3295302" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.68945867" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49932885" weight="0.32905984" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2033557" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="right" auto_hide="true" id="Ant Build" order="6" weight="0.24966443" />
-      <window_info x="796" y="77" width="491" height="702" id="UI Designer" order="1" type="FLOATING" weight="0.3295302" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3988604" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="right" auto_hide="true" id="Maven Projects" order="3" weight="0.3295302" />
+      <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32905984" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3295302" />
-      <window_info id="Learn" order="8" />
+      <window_info anchor="right" auto_hide="true" id="Ant Build" order="6" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3295302" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" auto_hide="true" id="Ant Build" order="6" weight="0.24966443" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20067114" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="DB Execution Console" order="11" />
-      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49932885" weight="0.32905984" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.22517483" />
-      <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="0" />
       <window_info x="796" y="77" width="491" height="702" id="UI Designer" order="1" type="FLOATING" weight="0.3295302" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32905984" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20067114" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="7" />
       <window_info id="Learn" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3988604" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.32905984" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.22517483" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.3988604" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49932885" weight="0.32905984" />
+      <window_info anchor="bottom" id="DB Execution Console" order="11" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info anchor="right" auto_hide="true" id="Maven Projects" order="3" weight="0.3295302" />
-      <window_info id="DB Browser" order="7" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" auto_hide="true" id="Ant Build" order="6" weight="0.24966443" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -372,13 +371,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Hospital.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="152" column="44" lean-forward="true" selection-start-line="152" selection-start-column="44" selection-end-line="152" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/javax/swing/JFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -398,74 +390,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#87#88#0" expanded="true" />
-            <element signature="e#151#152#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/mysql-connector-java-8.0.12/mysql-connector-java-8.0.12.jar!/com/mysql/cj/protocol/result/AbstractResultsetRow.class" />
+    <entry file="file://$PROJECT_DIR$/src/people.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/InsertForm.java" />
     <entry file="file://$PROJECT_DIR$/src/InsertForm.form" />
-    <entry file="file://$PROJECT_DIR$/src/Shops.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTHospital.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTHotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTShops.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTTravelAgency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/hospital.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -477,25 +412,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TravelAgency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/MainForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/INSERTIndividual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/Shops.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Individual.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hotel.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -504,17 +431,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hospital.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTHotel.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTIndividual.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTShops.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TravelAgency.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTHospital.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTTravelAgency.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTHospital.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTHotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTIndividual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Hotel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="799">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hospital.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="149">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTShops.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/INSERTTravelAgency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TravelAgency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shops.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -584,6 +591,17 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>mysql-connector-java-8.0.12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

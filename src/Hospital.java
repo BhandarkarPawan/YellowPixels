@@ -21,7 +21,6 @@ public class Hospital extends JFrame {
     private JTextField textField1;
     private JLabel label1;
     private JButton map;
-    private JLabel lbl;
     private JTextField textField2;
 
     private Statement stm;
@@ -39,16 +38,21 @@ public class Hospital extends JFrame {
 
     Hospital() throws Exception{
 
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixel",
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
                 "root", "root123");
-        con.setAutoCommit(false);
+        con.setAutoCommit(true);
 
         stm = con.createStatement();
 
         INSERTButton.addActionListener(new ActionListener() {
             @Override
+
             public void actionPerformed(ActionEvent e) {
-                new INSERTHospital(stm);
+                try {
+                    new INSERTHospital(stm);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
             }
         });
 
@@ -138,21 +142,18 @@ public class Hospital extends JFrame {
         });
 
         map.addActionListener(e -> {
-                    //int text = Integer.parseInt(textField1.getText());
-                    String x = "select * from Main_table where category='Hospital' and phone_num=9886144712";
-                    String q;
+                    String text=textField1.getText();
+                    String x = "select * from Main_table where category='Hospital' and phone_num="+text;
+                    String q = "";
                     try
-                    {
-                        rs = stm.executeQuery(x);
-                        System.out.println("aaaaaaaaaaaaa");
-                        System.out.println("ffdgdfs");
-                        rs.next();
-                        System.out.println(rs.getObject((5)));
-                        q=(rs.getString("url"));
-                        lbl.setText(q);
+                    {   rs = stm.executeQuery(x);
+                        while(rs.next()) {
+                            q = (rs.getString(5));
+                            System.out.println(q);
+                        }
+                        java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
                     } catch (Exception ee) {
                         JOptionPane.showMessageDialog(this, "Error");
-                        ee.printStackTrace();
                     }
                 }
                 );

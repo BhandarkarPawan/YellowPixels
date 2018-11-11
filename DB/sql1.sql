@@ -63,17 +63,10 @@ CREATE TABLE Individual
 phone_num bigint PRIMARY KEY, 
 FName varchar(20),
 LName varchar(20),
+Works_for varchar(20),
 FOREIGN KEY(phone_num) REFERENCES Main_table(phone_num)
-ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-CREATE TABLE Works_for
-(
-individual_phone_num bigint,
-works_for_phone_num bigint,
-FOREIGN KEY(individual_phone_num) REFERENCES Individual(phone_num)
 ON DELETE CASCADE ON UPDATE CASCADE,
-FOREIGN KEY(works_for_phone_num) REFERENCES Main_Table(phone_num)
+CHECK (Works_for in ('Hospital', 'Shops', 'Travel Agency', 'Hotel'))
 );
 
 INSERT INTO Main_table VALUES(9886144693, 'Individual', 'Karangalpady', 'Mangalore', 'https://www.google.com/maps/place/12%C2%B052''39.6%22N+74%C2%B050''37.7%22E/@12.8776672,74.8416273,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d12.8776619!4d74.8438158');
@@ -136,24 +129,24 @@ INSERT INTO Main_table VALUES(9886144750, 'Shops', 'Lallbagh', 'Mangalore', 'htt
 INSERT INTO Main_table VALUES(9886144751, 'Shops', 'Pandeshwar', 'Mangalore', 'https://www.google.com/maps/place/The+Forum+Fiza+Mall/@12.8575949,74.8361499,17z/data=!3m2!4b1!5s0x3ba35bae23326d4f:0xe6f4c7066f758590!4m5!3m4!1s0x3ba35bae233a2a7f:0xbfe781ac5c407f93!8m2!3d12.8575897!4d74.8383386');
 
 -- Dummy data to test Individual UI
-INSERT INTO Individual VALUES(9886144693, 'Pawan', 'Bhandarkar');
-INSERT INTO Individual VALUES(9886144694, 'Nikhil','Kamath');
-INSERT INTO Individual VALUES(9886144695, 'Json', 'Dsouza');
-INSERT INTO Individual VALUES(9886144696, 'Raj', 'Kapoor');
-INSERT INTO Individual VALUES(9886144697, 'Ganapathi', 'Sharma');
-INSERT INTO Individual VALUES(9886144698, 'John', 'Walk');
-INSERT INTO Individual VALUES(9886144699, 'Peter', 'Bing');
-INSERT INTO Individual VALUES(9886144701, 'Roop Singam', 'Rathod');
-INSERT INTO Individual VALUES(9886144702, 'Alif', 'Shah');
-INSERT INTO Individual VALUES(9886144703, 'Iwan', 'Khan');
-INSERT INTO Individual VALUES(9886144704, 'Ira', 'Green');
-INSERT INTO Individual VALUES(9886144705, 'Jon', 'Blake');
-INSERT INTO Individual VALUES(9886144706, 'Sudeep', 'Khan');
-INSERT INTO Individual VALUES(9886144707, 'Chandra', 'Reddy');
-INSERT INTO Individual VALUES(9886144708, 'Vivek', 'Roy');
-INSERT INTO Individual VALUES(9886144709, 'June', 'Paint');
-INSERT INTO Individual VALUES(9886144710, 'Jonny', 'Jain');
-INSERT INTO Individual VALUES(9886144711, 'Deepika', 'Desai');
+INSERT INTO Individual VALUES(9886144693, 'Pawan', 'Bhandarkar' ,'Hospital');
+INSERT INTO Individual VALUES(9886144694, 'Nikhil','Kamath' ,'Hospital');
+INSERT INTO Individual VALUES(9886144695, 'Json', 'Dsouza' ,'Hotel');
+INSERT INTO Individual VALUES(9886144696, 'Raj', 'Kapoor' ,'Hotel');
+INSERT INTO Individual VALUES(9886144697, 'Ganapathi', 'Sharma', 'Shops');
+INSERT INTO Individual VALUES(9886144698, 'John', 'Walk' ,'Shops');
+INSERT INTO Individual VALUES(9886144699, 'Peter', 'Bing' ,'Travel Agency');
+INSERT INTO Individual VALUES(9886144701, 'Roop Singam', 'Rathod' ,'Travel Agency');
+INSERT INTO Individual VALUES(9886144702, 'Alif', 'Shah' ,'Hotel');
+INSERT INTO Individual VALUES(9886144703, 'Iwan', 'Khan' , 'Hotel');
+INSERT INTO Individual VALUES(9886144704, 'Ira', 'Green' ,'Hospital');
+INSERT INTO Individual VALUES(9886144705, 'Jon', 'Blake' ,'Shops');
+INSERT INTO Individual VALUES(9886144706, 'Sudeep', 'Khan' ,'Shops');
+INSERT INTO Individual VALUES(9886144707, 'Chandra', 'Reddy' ,'Hotel');
+INSERT INTO Individual VALUES(9886144708, 'Vivek', 'Roy' ,'Hotel');
+INSERT INTO Individual VALUES(9886144709, 'June', 'Paint' , 'Hospital');
+INSERT INTO Individual VALUES(9886144710, 'Jonny', 'Jain' ,'Travel Agency');
+INSERT INTO Individual VALUES(9886144711, 'Deepika', 'Desai' ,'Travel Agency');
 
 INSERT INTO Hospital VALUES(9886144712, 'KMC', 1,1,1,1);
 INSERT INTO Hospital VALUES(9886144713, 'COLOMBIA', 1,1,1,1);
@@ -205,4 +198,7 @@ select * from Hospital;
 select * from Hotel;
 select * from Shops;
 select * from Individual;
-select * from Works_for;
+
+
+delete from Main_table where phone_num=11223344
+delete from Traavel_agency where phone_num=11223344

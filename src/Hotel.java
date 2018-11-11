@@ -19,6 +19,8 @@ public class Hotel extends JFrame{
     private JCheckBox homeDeliveryCheckBox;
     private JTable resultsTable;
     private JButton INSERTButton;
+    private JTextField textField1;
+    private JButton map;
     private Statement stm;
     private ResultSet rs;
 
@@ -39,14 +41,18 @@ public class Hotel extends JFrame{
 
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
                 "root", "root123");
-        con.setAutoCommit(false);
+        con.setAutoCommit(true);
 
         stm = con.createStatement();
 
         INSERTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new INSERTHospital(stm);
+                try {
+                    new INSERTHotel(stm);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
             }
         });
 
@@ -114,6 +120,22 @@ public class Hotel extends JFrame{
                 ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
 
         });
+        map.addActionListener(e -> {
+                    String text=textField1.getText();
+                    String x = "select * from Main_table where category='Hotel' and phone_num="+text;
+                    String q = "";
+                    try
+                    {   rs = stm.executeQuery(x);
+                        while(rs.next()) {
+                            q = (rs.getString(5));
+                            System.out.println(q);
+                        }
+                        java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
+                    } catch (Exception ee) {
+                        JOptionPane.showMessageDialog(this, "Error");
+                    }
+                }
+        );
 
 
         setContentPane(root);

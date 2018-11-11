@@ -232,19 +232,16 @@
         <properties>
           <font name="Arial Black" size="12" style="1"/>
           <foreground color="-16777216"/>
+          <horizontalAlignment value="0"/>
+          <preferredSize width="500" height="18"/>
           <text value="Press the below button to locate your hospital"/>
+          <verticalAlignment value="0"/>
         </properties>
       </component>
       <component id="eaaf5" class="javax.swing.JButton" binding="map">
         <constraints/>
         <properties>
           <text value="Map"/>
-        </properties>
-      </component>
-      <component id="ee833" class="javax.swing.JLabel" binding="lbl">
-        <constraints/>
-        <properties>
-          <text value="Label"/>
         </properties>
       </component>
     </children>

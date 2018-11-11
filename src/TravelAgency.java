@@ -24,6 +24,8 @@ public class TravelAgency extends JFrame{
     private JButton SEARCHButton;
     private JCheckBox internationalCheckBox;
     private JButton INSERTButton;
+    private JTextField textField1;
+    private JButton map;
 
     private Statement stm;
     private ResultSet rs;
@@ -42,13 +44,17 @@ public class TravelAgency extends JFrame{
     TravelAgency() throws Exception{
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/YellowPixels",
                 "root", "root123");
-        con.setAutoCommit(false);
+        con.setAutoCommit(true);
         stm = con.createStatement();
 
         INSERTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new INSERTTravelAgency(stm);
+                try {
+                    new INSERTTravelAgency(stm);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
             }
         });
 
@@ -142,6 +148,22 @@ public class TravelAgency extends JFrame{
             ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
 
         });
+        map.addActionListener(e -> {
+                    String text=textField1.getText();
+                    String x = "select * from Main_table where category='Travel_agency' and phone_num="+text;
+                    String q = "";
+                    try
+                    {   rs = stm.executeQuery(x);
+                        while(rs.next()) {
+                            q = (rs.getString(5));
+                            System.out.println(q);
+                        }
+                        java.awt.Desktop.getDesktop().browse(java.net.URI.create(q));
+                    } catch (Exception ee) {
+                        JOptionPane.showMessageDialog(this, "Error");
+                    }
+                }
+        );
 
 
         setContentPane(root);
